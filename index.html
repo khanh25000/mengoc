@@ -1,11 +1,39 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="vi">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Document</title>
+    <title>Hiệu Ứng Chữ Chạy</title>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="style.css" />
   </head>
   <body>
-    <h1>hello</h1>
+    <video autoplay muted loop class="video-bg">
+      <source
+        src="https://assets.mixkit.co/videos/preview/mixkit-abstract-blue-motion-background-345.mp4"
+        type="video/mp4"
+      />
+    </video>
+    <div class="overlay"></div>
+    <canvas id="particles"></canvas>
+
+    <div class="main-container">
+      <div class="text-container main-text">
+        <h1 id="animatedText"></h1>
+      </div>
+
+      <div class="text-container sub-text">
+        <p id="subAnimatedText"></p>
+      </div>
+    </div>
+
+    <script src="script.js"></script>
   </body>
 </html>

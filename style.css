@@ -1,0 +1,131 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Montserrat", sans-serif;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+  background: #000;
+}
+
+.video-bg {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  filter: blur(5px);
+  z-index: -2;
+  transform: scale(1.1);
+}
+
+.overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.5);
+  z-index: -1;
+}
+
+.main-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 30px;
+  width: 90%;
+  max-width: 1200px;
+}
+
+.text-container {
+  text-align: center;
+  background: rgba(255, 255, 255, 0.1);
+  backdrop-filter: blur(10px);
+  border-radius: 15px;
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  box-shadow: 0 0 20px rgba(0, 123, 255, 0.3);
+  animation: fadeIn 1s ease-out;
+  width: 100%;
+}
+
+.main-text {
+  padding: 50px 70px;
+  max-width: 900px;
+}
+
+.sub-text {
+  padding: 30px 50px;
+  max-width: 700px;
+}
+
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+    transform: scale(0.9);
+  }
+  100% {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+#animatedText {
+  color: #fff;
+  font-size: 36px;
+  font-weight: 700;
+  line-height: 1.5;
+  text-shadow: 0 0 10px rgba(0, 221, 235, 0.7);
+  min-height: 1.2em;
+  letter-spacing: 1px;
+}
+
+#subAnimatedText {
+  color: #00ddeb;
+  font-size: 24px;
+  font-weight: 600;
+  line-height: 1.5;
+  text-shadow: 0 0 5px rgba(0, 221, 235, 0.5);
+  min-height: 1.2em;
+  letter-spacing: 0.5px;
+}
+
+#particles {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: -1;
+}
+
+/* Hiệu ứng di chuyển background theo chuột */
+.video-bg {
+  transition: transform 0.3s ease-out;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .main-text {
+    padding: 30px 20px;
+  }
+
+  .sub-text {
+    padding: 20px 15px;
+  }
+
+  #animatedText {
+    font-size: 28px;
+  }
+
+  #subAnimatedText {
+    font-size: 20px;
+  }
+}
